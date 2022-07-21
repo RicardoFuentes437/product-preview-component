@@ -15,9 +15,10 @@ body h3 {
 
 .container {
   background-color: hsl(30deg, 38%, 92%);
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  box-shadow: 5px;
 }
 .container .card {
   display: flex;
