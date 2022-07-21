@@ -7,18 +7,17 @@ body {
 body p {
   font-size: 14px;
   font-family: "Montserrat";
+  color: hsl(228deg, 12%, 48%);
 }
-body h2 {
+body h3 {
   font-family: "Fraunces";
 }
 
 .container {
   background-color: hsl(30deg, 38%, 92%);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
 }
 .container .card {
   display: flex;
@@ -28,16 +27,21 @@ body h2 {
   border-radius: 10px;
   overflow: hidden;
   background-color: hsl(0deg, 0%, 100%);
-  width: 450px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 500px;
+  height: 350px;
 }
 .container .card .product-image {
-  height: 300px;
+  display: block;
+  height: 100%;
+}
+.container .card .product-image-2 {
+  display: none;
 }
 .container .card .content {
-  padding: 0 10px 0;
+  padding: 15px 20px 0;
+}
+.container .card .content .card-product-name .product-name {
+  color: hsl(212deg, 21%, 14%);
 }
 .container .card .content .card-prices {
   display: flex;
@@ -45,6 +49,39 @@ body h2 {
   justify-content: space-around;
   align-items: center;
 }
-.container .card .content .card-prices p {
+.container .card .content .card-prices .current-price {
+  color: hsl(158deg, 36%, 37%);
+}
+.container .card .content .card-prices .old-price {
   text-decoration: line-through;
+}
+.container .card .content .card-button {
+  display: flex;
+  width: 200px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  width: 100%;
+}
+.container .card .content .card-button .btn {
+  background-color: hsl(158deg, 36%, 37%);
+  color: white;
+  font-size: 14px;
+  width: 100%;
+}
+
+@media (max-width: 375px) {
+  .container .card {
+    flex-direction: column;
+    width: 350px;
+    height: 550px;
+  }
+  .container .card .product-image {
+    display: none;
+  }
+  .container .card .product-image-2 {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
