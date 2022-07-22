@@ -5,14 +5,23 @@ body{
     padding: 0;
     margin: 0;
 
-    p {
-        font-size: 14px;
+    .above {
+        font-size: 11px;
         font-family: 'Montserrat';
         color: hsl(228, 12%, 48%);
     }
 
-    h3{
+    .small {
+        font-size: 14px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        color: hsl(228, 12%, 48%);
+    }
+
+    .big{
+        font-size: 29px;
         font-family: 'Fraunces';
+        font-weight: 700;
     }
 }
 
@@ -20,23 +29,25 @@ body{
     background-color: hsl(30, 38%, 92%);
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     box-shadow: 5px;
 
     .card {
         display: flex;
         flex-direction: row;
-        grid-column: 2;
-        grid-row: 2;
+        grid-column: 2/4;
+        grid-row: 2/3;
         border-radius: 10px;
-        overflow: hidden;
+        overflow: auto;
         background-color: hsl(0, 0%, 100%);
-        width: 500px;
-        height: 350px;
+        width: 480px;
+        height: 320px;
+        line-height: 0.59cm;
     
         .product-image {
             display: block;
             height: 100%;
+            width: 50%;
         }
 
         .product-image-2{
@@ -87,12 +98,14 @@ body{
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
     .container{
         .card{
             flex-direction: column;
-            width: 350px;
+            width: 340px;
             height: 550px;
+            grid-column: 2 / 4;
+            grid-row: 2;
 
             .product-image {
                 display: none;
